@@ -4,5 +4,7 @@ html(lang='en')
     title= title
   body
     h1= message
+    // ciclo che prende uno stato dal vettore di stati passato dalla pagina js
     each stato in stati
+      // ogni stato viene visualizzato in un paragrafo
       p #{stato}

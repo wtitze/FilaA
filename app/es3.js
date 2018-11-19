@@ -13,9 +13,16 @@ app.get('/', function (req, res) {
 });
 
 app.get('/info', function (req, res) {
+  // prelevo la nazione che ha inserito l'utente
   var nazione = req.query.nazione;
+  // prelevo la scelta che ha selezionato l'utente tramite i radiobutton: capitale o popolazione
+  // notare che si usa sempre req.query    
+  // info è il nome dei radiobutton
   var info = req.query.info;
   if (info == 'capitale' ) {
+      // resetituisco, tra le altre cose, anche la capitale
+      // countries.info(nazione, 'name') contiene tutte le info su quella nazione
+      // .capital serve per prendere solo la capitale tra tute le informazioni
       res.render('es3', {message: countries.info(nazione, 'name').capital, title:'capitale'});
   }
   else

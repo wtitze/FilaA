@@ -6,4 +6,6 @@ html
     ol
       each nazione in list
         li 
+          // questa volta il nome è un link ipertestuale
+          // alla pagina di wikipedia contentua nel campo wiki
           a(href= nazione.wiki) #{nazione.name}

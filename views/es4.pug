@@ -3,6 +3,11 @@ html
     title= title
   body
     h1= message
+    // elenco numerato
     ol
+      // ciclo che preleva una nazione alla volta dalla lista di tutte le nazioni
+      // passate dalla pagina js
       each nazione in list
+        // prelevo il nome della nazione che sto considerando
+        // e la assegno ad li
         li= nazione.name

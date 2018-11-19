@@ -12,8 +12,14 @@ app.get('/', function (req, res) {
   res.render('es6', {message: 'impariamo la geografia', title:'fila A', list: countries.all()});
 });
 
+// stavolta il passaggio dei dati avviene direttamente all'itnero dell'url, senza componenti di input
+// per prelevarli devo utilizzare i :nazione per dire che dopo l'action capital c'è un valore
+// che identifico con nazione
 app.get('/capital/:nazione', function (req, res) {
+  // per prelevare il dato questa volta devoo utilizzare params
   var nazione = req.params.nazione;
+  // per restituire la capitale utilizzo il metodo capital:
+  // countries.capital(nazione, 'name')
   res.render('es7', {message: 'impariamo la geografia', title:'fila A', capitale: countries.capital(nazione, 'name')});
 });
 

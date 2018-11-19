@@ -3,10 +3,15 @@ html
     title= title
   body
     h1= message
+    // definizione della tabella
     table
       each nazione, index in list
+        // una riga per ogni nazione
         tr
+          // prima cella il nuemro della nazione
           td= index
+          // seconda cella il noem della nazione
           td= nazione.name
+          // terza cella il link appa pagina di wikipedia
           td
             a(href= nazione.wiki) wiki

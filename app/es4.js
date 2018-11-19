@@ -9,6 +9,7 @@ app.set('views', './views');
 app.set('view engine', 'pug');
 
 app.get('/', function (req, res) {
+  // restituisco tutte le infomrazioni sulle nazioni con countries.all()
   res.render('es4', {message: 'impariamo la geografia', title:'fila A', list: countries.all()});
 });
 
@@ -22,7 +23,6 @@ app.get('/info', function (req, res) {
   {
       res.render('es3', {message: countries.info(nazione, 'name').population, title:'capitale'});
   }
-  
 });
 
 app.listen(3000, function () {
