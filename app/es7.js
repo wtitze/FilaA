@@ -17,11 +17,6 @@ app.get('/capital/:nazione', function (req, res) {
   res.render('es7', {message: 'impariamo la geografia', title:'fila A', capitale: countries.capital(nazione, 'name')});
 });
 
-app.get('/states/:nazione', function (req, res) {
-  var nazione = req.params.nazione;
-  res.render('es8', {message: 'impariamo la geografia', title:'fila A', stati: countries.states(nazione, 'name')});
-});
-
 app.get('/info', function (req, res) {
   var nazione = req.query.nazione;
   var info = req.query.info;

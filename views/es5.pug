@@ -1,0 +1,9 @@
+html
+  head
+    title= title
+  body
+    h1= message
+    ol
+      each nazione in list
+        li 
+          a(href= nazione.wiki) #{nazione.name}

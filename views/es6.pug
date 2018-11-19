@@ -1,0 +1,12 @@
+html
+  head
+    title= title
+  body
+    h1= message
+    table
+      each nazione, index in list
+        tr
+          td= index
+          td= nazione.name
+          td
+            a(href= nazione.wiki) wiki

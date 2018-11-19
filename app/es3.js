@@ -9,17 +9,7 @@ app.set('views', './views');
 app.set('view engine', 'pug');
 
 app.get('/', function (req, res) {
-  res.render('es6', {message: 'impariamo la geografia', title:'fila A', list: countries.all()});
-});
-
-app.get('/capital/:nazione', function (req, res) {
-  var nazione = req.params.nazione;
-  res.render('es7', {message: 'impariamo la geografia', title:'fila A', capitale: countries.capital(nazione, 'name')});
-});
-
-app.get('/states/:nazione', function (req, res) {
-  var nazione = req.params.nazione;
-  res.render('es8', {message: 'impariamo la geografia', title:'fila A', stati: countries.states(nazione, 'name')});
+  res.render('es2', {message: 'impariamo la geografia', title:'fila A'});
 });
 
 app.get('/info', function (req, res) {

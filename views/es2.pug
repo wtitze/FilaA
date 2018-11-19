@@ -1,0 +1,17 @@
+doctype html
+html(lang='en')
+  head
+    title= title
+  body
+    h1= message
+    form(action='info', method='get')
+      | inserisci la nazione:
+      input(type='text', name='nazione')
+      br
+      input(type='radio', name='info', value='capitale') 
+      | capitale
+      br
+      input(type='radio', name='info', value='popolazione') 
+      | popolazione     
+      br
+      input(type='submit', value='send')
