@@ -1,0 +1,16 @@
+html
+  head
+    title= title
+  body
+    h1= message
+    // definizione della tabella
+    table
+      each document, index in list
+        // una riga per ogni nazione
+        tr
+          // prima cella il nuemro della nazionegit commit
+          td= index+1
+          // seconda cella il noem della nazione
+          td= document._id
+          // terza cella il link appa pagina di wikipedia
+          td(align='right')= document.numero
